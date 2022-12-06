@@ -67,10 +67,10 @@ COPY --from=builder /usr/local/lib/libdlib.so* /usr/local/lib/
 
 # If is necesary take the php extention folder uncommenting the next line
 # RUN php -i | grep extension_dir
-COPY --from=builder /usr/local/lib/php/extensions/no-debug-non-zts-20200930/pdlib.so /usr/local/lib/php/extensions/no-debug-non-zts-20200930/
+COPY --from=builder /usr/local/lib/php/extensions/no-debug-non-zts-20210902/pdlib.so /usr/local/lib/php/extensions/no-debug-non-zts-20210902/
 
 # Copy bz2.so
-COPY --from=builder /usr/local/lib/php/extensions/no-debug-non-zts-20200930/bz2.so /usr/local/lib/php/extensions/no-debug-non-zts-20200930/
+COPY --from=builder /usr/local/lib/php/extensions/no-debug-non-zts-20210902/bz2.so /usr/local/lib/php/extensions/no-debug-non-zts-20210902/
 
 # Enable PDlib and bz2 on final image
 
